@@ -32,6 +32,15 @@ container.addEventListener("mouseover", function(e){
     
 })
 
+function changeColorBack(target) {
+    target.style.backgroundColor = 'white';
+}
+container.addEventListener("click", function(e) {
+    target = e.target;
+    if (target.matches("div.cell")) {
+        changeColorBack(target);
+    }
+})
 
 reset.addEventListener('click', function() {
 window.location.reload();
